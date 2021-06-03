@@ -1,0 +1,29 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A proof of concept React app that does not use create-react-app.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelyinopen/react-starter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelyinopen/react-starter/issues"
+  },
+  "homepage": "https://github.com/michaelyinopen/react-starter",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-typescript": "^7.14.4",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

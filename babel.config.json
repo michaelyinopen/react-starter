@@ -1,0 +1,30 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": "defaults",
+        "useBuiltIns": "usage",
+        "corejs": "3.13",
+        "exclude": [
+          "transform-typeof-symbol"
+        ]
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
