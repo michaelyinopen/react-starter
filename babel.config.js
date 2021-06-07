@@ -48,7 +48,8 @@ module.exports = function (api) {
           development: isEnvDevelopment || isEnvTest,
           runtime: "automatic",
         }
-      ]
+      ],
+      ["@babel/preset-typescript"]
     ]
   }
 }
