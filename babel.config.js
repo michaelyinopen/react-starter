@@ -29,22 +29,18 @@ module.exports = function (api) {
     presets: [
       [
         "@babel/env",
-        (isEnvProduction || isEnvDevelopment)
-          ? {
-            "targets": "defaults",
-            "useBuiltIns": "usage",
-            "corejs": "3.13",
-            "exclude": [
-              "transform-typeof-symbol"
-            ]
-          }
-          : isEnvTest
-            ? {
-              "targets": {
-                "node": "current"
-              }
-            }
-            : undefined
+        {
+          "targets": isEnvProduction || isEnvDevelopment
+            ? "defaults"
+            : {
+              "node": "current"
+            },
+          "useBuiltIns": "usage",
+          "corejs": "3.13",
+          "exclude": [
+            "transform-typeof-symbol"
+          ]
+        }
       ],
       [
         "@babel/preset-react",
