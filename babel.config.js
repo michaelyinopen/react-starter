@@ -50,6 +50,14 @@ module.exports = function (api) {
         }
       ],
       ["@babel/preset-typescript"]
+    ],
+    plugins: [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          version: require("@babel/runtime/package.json").version,
+        },
+      ]
     ]
   }
 }

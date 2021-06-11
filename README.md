@@ -12,7 +12,9 @@ A proof of concept React app that does not use create-react-app.
 5. Add Babel (can use JavaScript syntax proposals >= Stage 3)
     1. Run command
     ```
-    npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/preset-typescript
+    npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime
+
+    npm install --save @babel/runtime
     ```
     2. Add `babel.config.js`
         - cache when environment is development or test, otherwise do not cache. TODO: test when webpack is setup
@@ -20,3 +22,10 @@ A proof of concept React app that does not use create-react-app.
     ```
     $env:NODE_ENV = "development"; npx babel src --out-dir build --extensions '.js,.jsx,.ts,.tsx'
     ```
+6. Add `tsconfig.json`
+    - install typescript
+    ```
+    npm install -g typescript
+    ```
+    - Execute Run Build Task (Ctrl+Shift+B) from the global Terminal menu.
+7. 
