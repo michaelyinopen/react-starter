@@ -12,7 +12,7 @@ const myFunctionalComponent = () => {
   )
 }
 
-const oneThousand = 1_000
+export const oneThousand = 1_000
 // const oneThousand = 2 // should have error
 
 const a = console?.log("can optional-chaining with non-null")

@@ -15,4 +15,4 @@ const user: User = {
 //   name: "Hayes",
 // }
 
-export {}
+export default user;

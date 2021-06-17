@@ -28,4 +28,14 @@ A proof of concept React app that does not use create-react-app.
     npm install -g typescript
     ```
     - Execute Run Build Task (Ctrl+Shift+B) from the global Terminal menu.
-7. 
+7. Use Webpack
+    - install webpack
+    ```
+    npm install --save-dev webpack webpack-cli
+    ```
+    - Add `build` script to `package.json`
+    - Add `webpack.config.js`
+    - install loaders for css
+    ```
+    npm install --save-dev style-loader css-loader
+    ```
