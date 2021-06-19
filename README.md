@@ -12,7 +12,7 @@ A proof of concept React app that does not use create-react-app.
 5. Add Babel (can use JavaScript syntax proposals >= Stage 3)
     1. Run command
     ```
-    npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime
+    npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime @babel/plugin-syntax-dynamic-import
 
     npm install --save @babel/runtime
     ```
@@ -38,4 +38,20 @@ A proof of concept React app that does not use create-react-app.
     - install loaders for css
     ```
     npm install --save-dev style-loader css-loader
+    ```
+    - install HtmlWebpackPlugin
+    ```
+    npm install --save-dev html-webpack-plugin
+    ```
+    - Setup webpack-dev-server
+    ```
+    npm install --save-dev webpack-dev-server
+    ```
+    - polyfill promise and iterator
+    ```
+    <!-- npm install --save-dev webpack-dev-server -->
+    ```
+    - install babel loader
+    ```
+    npm install --save-dev babel-loader
     ```

@@ -57,7 +57,8 @@ module.exports = function (api) {
         {
           version: require("@babel/runtime/package.json").version,
         },
-      ]
+      ],
+      "@babel/plugin-syntax-dynamic-import"
     ]
   }
 }
