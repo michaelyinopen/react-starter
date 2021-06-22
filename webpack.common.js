@@ -2,22 +2,21 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
-  devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'build'),
+    contentBase: './build',
+    hot: true
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'React Starter',
-      hot: true,
-    }),
+      hot: true
+    })
   ],
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'build'),
-    clean: true,
+    clean: true
   },
   module: {
     rules: [
@@ -37,9 +36,9 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: 'asset/resource'
       }
-    ],
+    ]
   },
   optimization: {
     moduleIds: 'deterministic',
@@ -49,9 +48,9 @@ module.exports = {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all',
-        },
-      },
-    },
-  },
+          chunks: 'all'
+        }
+      }
+    }
+  }
 }

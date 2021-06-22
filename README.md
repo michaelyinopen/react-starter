@@ -56,8 +56,12 @@ A proof of concept React app that does not use create-react-app.
     npm install --save-dev webpack-bundle-analyzer
 
     // generate bundle profile
-    npx webpack --profile --json | Out-file 'stats.json' -Encoding OEM
+    npx webpack --profile --json --config webpack.prod.js| Out-file 'stats.json' -Encoding OEM
 
     // view the diagram
     npx webpack-bundle-analyzer stats.json
+    ```
+    - Separate development and production configurations
+    ```
+    npm install --save-dev webpack-merge
     ```
