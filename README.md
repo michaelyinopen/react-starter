@@ -65,3 +65,7 @@ A proof of concept React app that does not use create-react-app.
     ```
     npm install --save-dev webpack-merge
     ```
+8. Production-ready server for testing
+```
+npm install http-server --save-dev
+```
