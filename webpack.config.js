@@ -3,12 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: [
-    './src/index.js',
-  ],
+  entry: './src/index.js',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './build',
+    contentBase: path.resolve(__dirname, 'build'),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,7 +15,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
@@ -25,7 +23,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)$/,
-        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -42,5 +40,18 @@ module.exports = {
         type: 'asset/resource',
       }
     ],
+  },
+  optimization: {
+    moduleIds: 'deterministic',
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
   },
 }
