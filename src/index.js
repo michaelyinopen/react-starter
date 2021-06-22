@@ -1,10 +1,14 @@
 import { sampleItem } from './someBacisJavascript'
 
-function component() {
+async function getComponent() {
   const element = document.createElement('div')
+
+  // const { sampleItem } = await import('./someBasicJavascript.js')
   element.innerHTML = JSON.stringify(sampleItem)
 
   return element
 }
 
-document.body.appendChild(component())
+getComponent().then((component) => {
+  document.body.appendChild(component)
+});

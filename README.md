@@ -47,11 +47,17 @@ A proof of concept React app that does not use create-react-app.
     ```
     npm install --save-dev webpack-dev-server
     ```
-    - polyfill promise and iterator
-    ```
-    <!-- npm install --save-dev webpack-dev-server -->
-    ```
     - install babel loader
     ```
     npm install --save-dev babel-loader
+    ```
+    - webpack-bundle-analyzer
+    ```
+    npm install --save-dev webpack-bundle-analyzer
+
+    // generate bundle profile
+    npx webpack --profile --json | Out-file 'stats.json' -Encoding OEM
+
+    // view the diagram
+    npx webpack-bundle-analyzer stats.json
     ```
