@@ -37,6 +37,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.ts', '.js', '.tsx', '.jsx' ],
+  },
   optimization: {
     moduleIds: 'deterministic',
     runtimeChunk: 'single',
