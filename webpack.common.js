@@ -5,6 +5,7 @@ module.exports = {
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
+      lang: 'en',
       title: 'React Starter',
       hot: true
     })

@@ -69,3 +69,7 @@ A proof of concept React app that does not use create-react-app.
 ```
 npm install http-server --save-dev
 ```
+9. React
+```
+npm install react react-dom
+```
