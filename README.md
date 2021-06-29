@@ -1,6 +1,9 @@
 # react-starter
 A proof of concept React app that does not use create-react-app.
 
+## Final thoughts
+I decided to just use create-react-app in the end. I have learnt the fundamentals of babel and webpack, and often refer back to CRA to know what would be a sensible setup. Using CRA could avoid manage the many webpack plugins, their compatibility and latest updates.
+
 ## Steps
 1. Create Github repository, and clone to local computer
 2. `npm init` to create `package.json`
